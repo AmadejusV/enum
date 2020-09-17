@@ -1,0 +1,76 @@
+using System;
+
+namespace paskaita_2
+{
+    class Program
+    {
+        enum dienos
+        {
+            Pirmadienis=1,
+            Antradienis=2,
+            Treciadienis=3,
+            Ketvirtadienis=4,
+            Penktadienis=5,
+            Sestadienis=6,
+            Sekmadienis=7
+        }
+        static void Main(string[] args)
+        {
+            Console.WriteLine("Irasykite savaites dienos numeri:");
+            int num = int.Parse(Console.ReadLine());
+              dienos diena = (dienos)num;
+            // arba int diena = int.Parse(Console.ReadLine());
+            if (num>0 && num<=7)
+            {
+                Console.WriteLine((dienos)diena);
+            }
+            else
+            {
+                Console.WriteLine("Wrong Input");
+            }
+            
+
+
+            // --------------------- su switch
+            //int diena = int.Parse(Console.ReadLine());
+
+            //switch(diena)
+            //{
+             //   case 1:
+             //       Console.WriteLine("Pirmadienis");
+             //       break;
+             //   case 2:
+             //       Console.WriteLine("Antradienis");
+             //       break;
+             //   case 3:
+             //       Console.WriteLine("Treciadienis");
+             //       break;
+             //   case 4:
+             //       Console.WriteLine("Ketvirtadienis");
+             //       break;
+             //   case 5:
+             //       Console.WriteLine("Penktadienis");
+             //       break;
+             //   case 6:
+             //       Console.WriteLine("Sestadienis");
+             //       break;
+             //   case 7:
+             //       Console.WriteLine("Sekmadienis");
+             //       break;
+             //   default:
+             //       Console.WriteLine("Neteisingas skaicius");
+             //       break;
+            //}
+
+
+            //if(int.TryParse(Console.ReadLine(), out int number))
+            //{
+                //if (0 < number && number < 7)
+                //{
+                   // WeekDays day = (Weekdays)number;
+                    //Console.WriteLine(day);
+                //}
+            //}
+        }
+    }
+}
